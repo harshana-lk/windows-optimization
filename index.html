@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Windows - Optimization</title>
+    <!-- logo -->
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #0f0f0f;
+        color: #fff;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 20px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .stars {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("./harhuonlive.png") repeat;
+        opacity: 0.2;
+        z-index: 0;
+        animation: scrollStars 60s linear infinite;
+      }
+
+      @keyframes scrollStars {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: 1000px 1000px;
+        }
+      }
+
+      .content {
+        z-index: 1;
+        max-width: 800px;
+      }
+
+      h3 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+      }
+
+      h3 span {
+        display: inline-block;
+        background: linear-gradient(to right, #ec4899, #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      p {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #d1d5db;
+        margin-bottom: 30px;
+        line-height: 1.7;
+        font-family: Verdana, sans-serif;
+      }
+
+      button {
+        display: block;
+        width: 230px;
+        height: 60px;
+        margin: 10px auto;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+
+      #redButton {
+        background-color: #ef4444;
+      }
+
+      #redButton:hover {
+        background-color: #dc2626;
+      }
+
+      #greenButton {
+        background-color: #22c55e;
+      }
+
+      #greenButton:disabled {
+        background-color: #1f2937;
+        cursor: not-allowed;
+      }
+
+      #greenButton:hover:enabled {
+        background-color: #16a34a;
+      }
+
+      @media (max-width: 600px) {
+        h3 {
+          font-size: 1.8rem;
+        }
+
+        p {
+          font-size: 0.85rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stars"></div>
+
+    <div class="content">
+      <h3><span>Welcome to HarshuOnlive!</span></h3>
+      <p>
+        To Download the required files, follow these rules.<br /><br />
+
+        First, press the red button, Then you will be taken to another page.<br /><br />
+
+        Stay on the page for about 20 seconds.<br /><br />
+
+        Then come back and press the green button.<br /><br />
+
+        Then you will go directly to the video.<br /><br />
+
+        You can watch the video only if you follow the instructions.<br /><br />
+
+        Follow this Rules.
+      </p>
+
+      <button class="btnRed2" id="redButton">Click</button>
+      <button class="btnGreen2" id="greenButton" disabled>
+        Watch the video
+      </button>
+    </div>
+
+    <script>
+      const redButton = document.getElementById("redButton");
+      const greenButton = document.getElementById("greenButton");
+
+      const redClicked = sessionStorage.getItem("redButtonClicked");
+      if (redClicked) {
+        greenButton.removeAttribute("disabled");
+      }
+
+      redButton.addEventListener("click", () => {
+        window.location.href =
+          "https://crockerydestructivespoken.com/xaan84rssxaxajr25if?key=90659fdsvsd567bc8676bfa977e3610b6xaxa4e1c";
+        sessionStorage.setItem("redButtonClicked", true);
+      });
+
+      greenButton.addEventListener("click", () => {
+        const redClicked = sessionStorage.getItem("redButtonClicked");
+        if (!redClicked) {
+          window.location.href = "error.html";
+        } else {
+          window.location.href =
+            "https://www.youtube.com/results?search_query=shamod+firezz";
+        }
+      });
+
+      setInterval(() => {
+        window.location.reload();
+      }, 10000);
+    </script>
+  </body>
+</html>
